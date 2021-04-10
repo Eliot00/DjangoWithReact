@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from article.serializers import ArticleSerializer
 from article.models import Article
 
 
-def article_list(request):
-    articles = Article.objects.all()
-    context = {'articles': articles}
-
-    return render(request, 'article/article_list.html', context)
+class ArticleViewSet(viewsets.ModelViewSet):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
