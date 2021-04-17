@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ArticleList from './ArticleList';
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ArticleList />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
