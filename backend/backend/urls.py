@@ -20,4 +20,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('article.urls')),
+    path('auth/', include('jwt_auth.urls'))
 ]
