@@ -9,6 +9,8 @@ class JWTAuthentication(BaseAuthentication):
 
     def authenticate(self, request):
         header = request.META.get('HTTP_AUTHORIZATION')
+        if header is None:
+            return None
         try:
             token = header.split()[1]
             user = self.get_user(token)
